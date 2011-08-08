@@ -1,0 +1,466 @@
+@CHARSET "UTF-8";
+/*
+ * Project: ConsulTok
+ * Description: E-commerce social shopping web app featuring the OpenTok & ShopSense APIs.
+ * 
+ * Author: Ezra Velazquez
+ * Website: http://ezraezraezra.com
+ * Date: July 2011
+ * 
+ */
+@font-face {
+	font-family: polsku; src: url('images/Polsku.ttf');
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #AF9F7B;
+	width: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	color: #40413C;
+}
+#button_container {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	width: 300px;
+	height: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#camera_label {
+	position: absolute;
+	z-index: 2;
+	padding-left: 5px;
+	border-right: 2px solid #775E43;
+	border-bottom-right-radius: 10px;
+	background-color: #775E43;
+}
+#email_notes {
+	width: 175px;
+}
+.form_input {
+	float: left;
+	margin-left: 20px;
+	border: 1px solid;
+	border-radius: 7px;
+	height: 25px;
+	width: 250px;
+	outline: none;
+	margin-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 12px;
+}
+#form_instructions {
+	text-align: center;
+}
+.img_holder {
+	float: left;
+	text-align: center;
+	line-height: 138px;
+	font-size: 1em;
+	width: 112px;
+	height: 140px;
+}
+#intro_text_cameras {
+	text-align: center;
+	margin-top: 7%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+}
+#intro_text_private {
+	text-align: center;
+	margin-top: 30%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 75%;
+}
+#intro_text_public {
+	text-align: center;
+	margin-top: 25%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 75%;
+}
+.labels {
+	font-size: 14px;
+}
+.left_button {
+	font-size: 14px;
+	text-align: center;
+	width: 175px;
+	border: 1px solid;
+	height: 30px;
+	border-radius: 7px;
+	margin-top: 3px;
+	background-color: #f3f1eb;
+	-moz-transition: background-color: 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	margin-bottom: 25px;
+}
+#main_container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+}
+#notes {
+	width: 150px;
+	height: 180px;
+	border: 1px solid;
+	border-radius: 10px;
+	margin-top: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+	outline: none;
+}
+#opentok_container {
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+
+
+#private_container {
+	margin-right: 5px;
+	border-top-left-radius: 0px;
+	width: 549px;
+}
+#private_container_left {
+	width: 197px;
+	height: 425px;
+	float: left;
+}
+#private_container_right {
+	margin-top: -25px;
+	float: left;
+	width: 335px;
+	height: 385px;
+	overflow: hidden;
+}
+#private_container_right_holder {
+	margin-top: 25px;
+	float:left;
+	width:335px;
+	height: 385px;
+}
+#private_bottom {
+	background: url(images/trans-bottom.png) repeat-x 0 0;
+	height: 25px;
+	width: 100%;
+	left: 0;
+	position: relative;
+	top: 343px;
+	z-index:2;
+}	
+#private_form {
+	padding-top: 20px;
+	padding-left: 11px;
+}
+#private_label {
+	padding-left: 5px;
+	border-right: 2px solid #775E43;
+	border-bottom-right-radius: 10px;
+	background-color: #775E43;
+}
+#private_result_slider {
+	float: left;
+	clear: left;
+	width: 5px;
+	margin: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 370px;
+}
+#private_result_slider .ui-slider-range {
+}
+#private_result_slider .ui-slider-handle {
+	border-color: #ef2929;
+	width: 15px;
+	height: 15px;
+	margin-left: -1px;
+	outline: none;
+	cursor: pointer;
+}
+#private_slider_container {
+	float: left;
+	margin-top: 20px;
+	visibility: hidden;
+}
+#private_top {
+	background: url(images/trans-top.png) repeat-x 0 0;
+	height: 25px;
+	width: 100%;
+	left: 0;
+	position: relative;
+	top: 0;
+	z-index: 99;
+}
+.product_description {
+	font-size: 12px;
+	font-weight: normal;
+}
+.product_image {
+	max-height: 140px;
+	max-width: 112px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.product_sizes {
+	width: 64px;
+}
+.product_title {
+	font-size: 16px;
+	color: #775E43;
+}
+.progress_bar {
+	width: 60px;
+	height: 50px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+	text-align: center;
+}
+.progress_ball {
+	background-color: red;
+	border-radius: 25px;
+	width: 15px;
+	height: 15px;
+	-moz-border-radius: 25px;
+	margin: 2px;
+	position: relative;
+	float: left;
+	-webkit-animation-name: progress_loader;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: linear;
+	opacity: 0;
+	-webkit-tranform: scale(0.8);
+}
+#progress_ball_1 {
+	-webkit-animation-delay: .0s;
+}
+#progress_ball_2 {
+	-webkit-animation-delay: .2s;
+}
+#progress_ball_3 {
+	-webkit-animation-delay: .4s;
+}
+#public_bottom {
+	background: url(images/trans-bottom.png) repeat-x 0 0;
+	height: 25px;
+	width: 100%;
+	left: 0;
+	position: relative;
+	top: 333px;
+	z-index:2;
+}
+#public_container {
+	margin-left: 5px;
+	border-top-right-radius: 0px;
+	width: 333px;
+}
+#public_label {
+	float: right;
+	padding-right: 5px;
+	border-left: 2px solid #775E43;
+	border-bottom-left-radius: 10px;
+	text-align: right;
+	background-color: #775E43;
+}
+#public_results {
+	margin-top: -27px;
+	float: left;
+	width: 316px;
+	height: 385px;
+	overflow: hidden;
+}
+#public_results_container {
+	margin-top: 3px;
+	float: left;
+	width: 316px;
+	height: 385px;
+}
+#public_slider_container {
+	float: left;
+	visibility: hidden;
+}
+#public_top {
+	background: url(images/trans-top.png) repeat-x 0 0;
+	height: 25px;
+	width: 100%;
+	left: 0;
+	position: relative;
+	top: -2px;
+	z-index: 99;
+}
+.rc_public {
+	width: 316px;
+}
+.result_container {
+	float: left;
+	margin-bottom: 10px;
+	width: 335px;
+}
+#result_slider {
+	float: left;
+	clear: left;
+	width: 5px;
+	margin: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	height: 370px;
+}
+#result_slider .ui-slider-range {
+}
+#result_slider .ui-slider-handle {
+	border-color: #ef2929;
+	width: 15px;
+	height: 15px;
+	margin-left: -1px;
+	outline: none;
+	cursor: pointer;
+}
+#search_button {
+	width: 175px;
+}
+#search_button:hover {
+	background-color: white;
+}
+#search_button:active {
+	background-color: grey;
+}
+#search_query {
+	border: 1px solid;
+	border-radius: 7px;
+	height: 25px;
+	width: 165px;
+	outline: none;
+	font-size: 16px;
+	margin-top: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.share_button {
+	margin-right: auto;
+	margin-left: 28px;
+}
+#shop_container {
+	width: 900px;
+	margin-top:25px;
+	height: 425px;
+}
+#start_camera {
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	margin-bottom: 0px;
+}
+#stop_camera {
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+#title_container {
+	font-family: polsku;
+	font-size: 36px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 25px;
+	cursor: pointer;
+}
+.top_container {
+	width: 421px;
+	background-color: #F1F4F7;
+	height: 425px;
+	float: left;
+	border:2px solid;
+	border-radius:20px;
+	border-color: #775E43;
+}
+.txt_details {
+	float: left;
+	padding-bottom: 5px;
+}
+.txt_details_public {
+	width: 195px;
+}
+.txt_holder {
+	float: right;
+	width: 217px;
+	font-size: 12px;
+	height: 134px;
+	font-weight: normal;
+	padding: 3px;
+}
+.txt_holder_left {
+	width: 115px;
+	padding-right: 2px;
+}
+.txt_holder_right {
+	width: 100px;
+	margin-top: -4px;
+}
+.txt_public {
+	width: 198px;
+}	
+.ui-button {
+	font-size: 14px;
+	text-align: center;
+	width: 150px;
+	border: 1px solid;
+	height: 30px;
+	border-radius: 7px;
+}
+.ui-widget input {
+	font-size: 14px;
+}
+.ui-widget {
+	font-size: 14px;
+}
+.video_feed {
+	margin-left: auto;
+	margin-right: auto;
+	width: 387px;
+	height: 250px;
+	padding: 0 10px 0 10px;
+	float:left;
+}
+	.view_labels {
+	border-bottom: 2px solid;
+	width: 120px;
+	font-size: 18px;
+	font-weight: bold;
+	border-color: #775E43;
+	color: #F1F4F7;
+}	
+#vid_container {
+	margin-top: 50px;
+	height: 290px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+	border: 2px solid #775E43;
+	padding-bottom: 50px;
+	border-top-left-radius: 0px;
+	background-color: #F1F4F7;
+}
+@-webkit-keyframes progress_loader {
+	0%{opacity: 0;}
+	50%{opacity:1;}
+	100%{opacity:0;}
+}
