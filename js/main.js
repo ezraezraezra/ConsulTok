@@ -1,10 +1,11 @@
 /*
- * Project: ConsulTok
+ * Project:     ConsulTok
  * Description: E-commerce social shopping web app featuring the OpenTok & ShopSense APIs.
+ * Website:     http://consultok.opentok.com
  * 
- * Author: Ezra Velazquez
- * Website: http://ezraezraezra.com
- * Date: July 2011
+ * Author:      Ezra Velazquez
+ * Website:     http://ezraezraezra.com
+ * Date:        July 2011
  * 
  */
 
