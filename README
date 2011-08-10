@@ -15,7 +15,7 @@
  
  NOTE: *** 3rd PARTY LIBRARIES HAVE BEEN OMITTED FROM THE PUBLIC REPO ***
  
- Libaries Omitted:  OpenTok     http://www.tokbox.com
-                    Socket.io   http://socket.io
-                    jQuery      http://jquery.com
-                    jQueryUI    http://jqueryui.com
+ Libraries Omitted:  OpenTok     http://www.tokbox.com
+                     Socket.io   http://socket.io
+                     jQuery      http://jquery.com
+                     jQueryUI    http://jqueryui.com
